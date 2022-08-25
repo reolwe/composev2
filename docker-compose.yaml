@@ -5,3 +5,16 @@ services:
     build: maven
     volumes:
       - dataapp:/App42PaaS-Java-MySQL-Sample/target
+
+
+
+
+
+
+
+
+
+
+
+volumes:
+  dataapp:
