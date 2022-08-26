@@ -5,9 +5,10 @@ services:
     build: maven
     volumes:
       - dataapp:/App42PaaS-Java-MySQL-Sample/target
-
+    depends_on:
+      - mysql
   tomcat:
-    image: tomcat:8-jre8
+    image: tomcat:6
     volumes:
       - dataapp:/usr/local/tomcat/webapps
     ports:
@@ -17,8 +18,16 @@ services:
 
   mysql:
     image: mysql
+    restart: always
+    enviroment:
+      - MYSQL_DATABASE=appdatabase
+      - MYSQL_ROOT_PASSWORD=qwerty
+    ports:
+      - '3306:3306'
     volumes:
-      - dataapp:/usr/local/tomcat/webapps
+      - .:/docker-entrypoint-initdb.d
 
 volumes:
   dataapp:
+  db:
+    driver: local
