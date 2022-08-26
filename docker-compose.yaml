@@ -17,7 +17,7 @@ services:
       - maven
 
   mysql:
-    image: mysql:5.1.8
+    image: mysql:5
     restart: always
     environment:
       - MYSQL_DATABASE=appdatabase
