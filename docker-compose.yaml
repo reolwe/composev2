@@ -6,7 +6,7 @@ services:
     volumes:
       - dataapp:/App42PaaS-Java-MySQL-Sample/target
 
- tomcat:
+  tomcat:
     image: tomcat:8-jre8
     volumes:
       - dataapp:/usr/local/tomcat/webapps
@@ -15,13 +15,10 @@ services:
     depends_on:
       - maven
 
-
-
-
-
-
-
-
+  mysql:
+    image: mysql
+    volumes:
+      - dataapp:/usr/local/tomcat/webapps
 
 volumes:
   dataapp:
