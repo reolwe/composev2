@@ -4,7 +4,7 @@ services:
   maven:
     build: maven
     volumes:
-      - dataapp:/App42PaaS-Java-MySQL-Sample/target
+      - dataapp:/origin556/target
     depends_on:
       - mysql
   tomcat:
