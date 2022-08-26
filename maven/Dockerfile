@@ -9,5 +9,6 @@ RUN git clone https://github.com/reolwe/origin556.git
 RUN apt install -y maven
 WORKDIR /App42PaaS-Java-MySQL-Sample/
 RUN ls -l
-RUN mvn package
+RUN mvn clean
+RUN mvn install
 CMD ["mvn"]
