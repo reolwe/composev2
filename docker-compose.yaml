@@ -19,7 +19,7 @@ services:
   mysql:
     image: mysql:5.1.8
     restart: always
-    enviroment:
+    environment:
       - MYSQL_DATABASE=appdatabase
       - MYSQL_ROOT_PASSWORD=qwerty
     ports:
