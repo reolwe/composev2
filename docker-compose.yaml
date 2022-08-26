@@ -18,6 +18,7 @@ services:
 
   mysql:
     image: mysql:5
+    hostname: database
     restart: always
     environment:
       - MYSQL_DATABASE=appdatabase
