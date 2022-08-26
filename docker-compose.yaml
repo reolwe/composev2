@@ -6,7 +6,14 @@ services:
     volumes:
       - dataapp:/App42PaaS-Java-MySQL-Sample/target
 
-
+ tomcat:
+    image: tomcat:8-jre8
+    volumes:
+      - dataapp:/usr/local/tomcat/webapps
+    ports:
+      - 8080:8080
+    depends_on:
+      - maven
 
 
 
