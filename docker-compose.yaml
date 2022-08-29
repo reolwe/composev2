@@ -8,7 +8,7 @@ services:
     depends_on:
       - mysql
   tomcat:
-    image: tomcat:8
+    build: tomcat
     volumes:
       - dataapp:/usr/local/tomcat/webapps
     ports:
