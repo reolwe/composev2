@@ -11,6 +11,7 @@ WORKDIR /origin556/
 RUN ls -l
 RUN mvn clean
 RUN mvn install
-
+RUN mkdir -p /origin556/config/
+RUN cp /origin556/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT/Config.properties /origin556/config
 
 CMD ["mvn"]

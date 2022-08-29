@@ -5,12 +5,14 @@ services:
     build: maven
     volumes:
       - dataapp:/origin556/target
+      - configfile:/origin556/config
     depends_on:
       - mysql
   tomcat:
     build: tomcat
     volumes:
       - dataapp:/usr/local/tomcat/webapps
+      - configfile:/usr/local/tomcat/ROOT
     ports:
       - 8080:8080
     depends_on:
@@ -31,3 +33,4 @@ services:
 
 volumes:
   dataapp:
+  configfile:
