@@ -9,7 +9,7 @@ services:
     depends_on:
       - mysql
   tomcat:
-    build: tomcat
+    image: tomcat:jdk8-openjdk
     volumes:
       - dataapp:/usr/local/tomcat/webapps
       - configfile:/usr/local/tomcat/ROOT
