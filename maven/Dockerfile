@@ -11,4 +11,6 @@ WORKDIR /origin556/
 RUN ls -l
 RUN mvn clean
 RUN mvn install
+
+
 CMD ["mvn"]
